@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        wealth: {
+          DEFAULT: '#C8102E',
+          light: '#E53E56',
+          dark: '#a30d25',
+          foreground: '#FFFFFF',
+        },
+        investment: {
+          DEFAULT: '#0074D9',
+          light: '#3498FF',
+          dark: '#004e8f',
+          foreground: '#FFFFFF',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +97,50 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        },
+        'fade-in-right': {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' }
+        },
+        'number-count': {
+          '0%': { transform: 'translateY(0)' },
+          '10%': { transform: 'translateY(-10%)' },
+          '20%': { transform: 'translateY(-20%)' },
+          '30%': { transform: 'translateY(-30%)' },
+          '40%': { transform: 'translateY(-40%)' },
+          '50%': { transform: 'translateY(-50%)' },
+          '60%': { transform: 'translateY(-60%)' },
+          '70%': { transform: 'translateY(-70%)' },
+          '80%': { transform: 'translateY(-80%)' },
+          '90%': { transform: 'translateY(-90%)' },
+          '100%': { transform: 'translateY(-100%)' }
+        },
+        'grow-width': {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'fade-in-up': 'fade-in-up 0.5s ease-out',
+        'fade-in-right': 'fade-in-right 0.5s ease-out',
+        'number-count': 'number-count 1s ease-out',
+        'grow-width': 'grow-width 1s ease-out'
+			},
+      fontFamily: {
+        sans: ['Inter var', 'sans-serif'],
+        display: ['SF Pro Display', 'Inter var', 'sans-serif']
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
